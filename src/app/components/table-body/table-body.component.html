@@ -1,0 +1,18 @@
+<header class="header">
+    <div class="header-container container">
+        <div class="header-actions">
+            <select name="select" id="select" class="header-actions__select" [(ngModel)]="selectValue">
+                <option value="">Выберите количество:</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <button type="button" class="header-actions__btn" (click)="createElement()">Добавить Элемент</button>
+        </div>
+    </div>
+</header>
+<div class="table-body">
+    <div class="table-body__container container">
+        <div class="table-row"></div>
+    </div>
+</div>

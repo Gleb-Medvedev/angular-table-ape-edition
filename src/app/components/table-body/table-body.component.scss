@@ -1,0 +1,39 @@
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px;
+
+    &-actions {
+        display: grid;
+        grid-template-columns: 60% 1fr;
+        gap: 24px;
+
+        &__select,
+        &__btn {
+            padding: 8px;
+            border-radius: 16px;
+            outline: none;
+            border: none;
+            background-color: unset;
+            text-align: center;
+            text-transform: uppercase;
+            box-shadow: 0 2px 12px 2px gray;
+            text-shadow: 1px 1px gray;
+            transition: 200ms ease-out all;
+            font-weight: 600;
+            cursor: pointer;
+
+            &:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 6px 16px 4px rgb(90, 90, 90);
+            }
+        }
+    }
+}
+
+.table-body {
+    margin-top: 87px;
+    padding: 20px;
+}
