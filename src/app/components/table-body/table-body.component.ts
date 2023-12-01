@@ -15,14 +15,15 @@ export class TableBodyComponent {
     if (!this.selectValue || this.selectValue === 0) {
       this.selectValue = 1;
     }
+    if (document.querySelector('.table-body__container')?.childNodes!.length === 0) {
+      this.createRow();
+    }
     for (let i = 1; i <= this.selectValue; i++) {
       if (document.querySelector('.table-body__container')!.lastChild?.childNodes?.length === 3) {
-        this.createRow();
-        break;
-      } else {
-        document.querySelector('.table-body__container')!.lastChild?.appendChild(newCell.tempCell());
+      this.createRow();
       }
-    }
+      document.querySelector('.table-body__container')!.lastChild?.appendChild(newCell.tempCell());
+      }
   }
 
   createRow() {
@@ -33,15 +34,6 @@ export class TableBodyComponent {
     document.querySelector('.table-body__container')!.lastChild?.appendChild(newCell.tempCell());
   }
 }
-
-
-
-
-
-
-
-
-
 
 
 
