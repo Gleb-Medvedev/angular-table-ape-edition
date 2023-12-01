@@ -13,8 +13,6 @@
 }
 
 .table-row {
-    padding: 8px;
-    outline: 1px solid red;
     border-radius: 16px;
     display: flex;
 
@@ -26,4 +24,11 @@
 .table-cell {
     flex: 1 1 auto;
     text-align: center;
+    border-radius: 16px;
+    outline: 1px solid gray;
+    padding: 6px;
+
+    &:not(:last-child) {
+        margin-right: 12px;
+    }
 }
